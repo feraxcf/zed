@@ -23,19 +23,24 @@
       "ctrl-alt-c": "editor::CopyPath",
       "alt-right": "pane::SplitRight",
       "alt-left": "pane::SplitLeft",
-      "ctrl-m p": "markdown::OpenPreviewToTheSide",
-      "ctrl-m o": "markdown::OpenPreview",
+      "ctrl-m ctrl-p": "markdown::OpenPreviewToTheSide",
+      "ctrl-m ctrl-o": "markdown::OpenPreview",
       "alt-1": "workspace::ToggleLeftDock",
       "alt-2": "workspace::ToggleBottomDock",
       "alt-3": "workspace::ToggleRightDock",
       "ctrl-alt-space": "workspace::CloseAllDocks",
-      "ctrl-shift-k": "zed::OpenKeymap"
+      "ctrl-shift-k": "zed::OpenKeymap",
+      "ctrl-shift-f10": "task::Spawn",
+      "shift-f10": "task::Rerun",
+      "shift-f11": "zed::OpenLocalTasks"
     }
   },
   {
     "context": "Editor && mode == full",
     "bindings": {
       "enter": "editor::Newline",
+      "alt-enter": "language_selector::Toggle",
+      "shift-f": "workspace::NewFile",
       "shift-enter": "editor::NewlineBelow",
       "ctrl-shift-enter": null,
       "ctrl-enter": "editor::NewlineAbove"
@@ -64,7 +69,7 @@
       "alt-2": "workspace::ToggleBottomDock",
       "ctrl-c": "terminal::Copy",
       "ctrl-insert": "terminal::Copy",
-      "shift-v": "terminal::Paste"
+      "ctrl-v": "terminal::Paste"
     }
   },
   {
@@ -76,7 +81,8 @@
       "ctrl-s": "workspace::Save",
       "ctrl-alt-s": "workspace::SaveWithoutFormat",
       "ctrl-shift-s": "workspace::SaveAs",
-      "shift-f": "workspace::NewFile",
+      "shift-f": "project_panel::NewFile",
+      "shift-d": "project_panel::NewDirectory",
       "ctrl-shift-n": "workspace::NewWindow",
       "alt-q": "terminal_panel::ToggleFocus",
       "ctrl-1": ["workspace::ActivatePane", 0],

@@ -12,8 +12,18 @@
       "tab_size": 4
     },
     "JSONC": {
-      "show_inline_completions": false,
+      "show_inline_completions": true,
       "tab_size": 2
+    },
+    "JSON": {
+      "remove_trailing_whitespace_on_save": false,
+      "format_on_save": "off",
+      "tab_size": 4,
+      "show_inline_completions": false,
+      "ensure_final_newline_on_save": false
+    },
+    "Markdown": {
+      "enable_language_server": true
     }
   },
   "autosave": "on_focus_change",
@@ -46,9 +56,12 @@
   "indent_guides": {
     "coloring": "indent_aware"
   },
+  "format_on_save": "off",
   "show_whitespaces": "all",
   "soft_wrap": "none",
   "tab_size": 4,
+  "remove_trailing_whitespace_on_save": false,
+  
   "theme": {
     "mode": "system",
     "light": "Rosé Pine Moon",

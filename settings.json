@@ -7,9 +7,48 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "base_keymap": "VSCode",
+  "languages": {
+    "Python": {
+      "tab_size": 4
+    },
+    "JSONC": {
+      "show_inline_completions": false,
+      "tab_size": 2
+    }
+  },
+  "autosave": "on_focus_change",
+  "base_keymap": "JetBrains",
   "ui_font_size": 16,
-  "buffer_font_size": 13,
+  "buffer_font_size": 12,
+  "buffer_font_family": "JetBrains Mono",
+  "terminal": {
+    "font_family": "JetBrains Mono",
+    "toolbar": {
+      "title": false
+    }
+  },
+  "direnv": "shell_hook",
+  "scrollbar": {
+    "show": "auto"
+  },
+  "tab_bar": {
+    "show": false,
+    "show_nav_history_buttons": false
+  },
+  "tabs": {
+    "git_status": true
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": false,
+    "selections_menu": true
+  },
+  "indent_guides": {
+    "coloring": "indent_aware"
+  },
+  "show_whitespaces": "all",
+  "soft_wrap": "none",
+  "tab_size": 4,
   "theme": {
     "mode": "system",
     "light": "Rosé Pine Moon",

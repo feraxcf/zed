@@ -1,7 +1,8 @@
 [
   {
-    "context": "Editor",
     "bindings": {
+      "alt-u": "editor::ConvertToUpperCase",
+      "alt-l": "editor::ConvertToLowerCase",
       "ctrl-alt-shift-l": "editor::Format",
       "alt-up": "editor::AddSelectionAbove",
       "alt-down": "editor::AddSelectionBelow",
@@ -43,7 +44,7 @@
   {
     "context": "Editor && !inline_completion",
     "bindings": {
-      "ctrl-space": "editor::ShowInlineCompletion"
+      "ctrl-space": "editor::ShowCompletions"
     }
   },
   {

@@ -8,6 +8,12 @@
 // from the command palette or from `Zed` application menu.
 {
   "languages": {
+    "Plain Text": {
+      "remove_trailing_whitespace_on_save": false,
+      "format_on_save": "off",
+      "tab_size": 4,
+      "ensure_final_newline_on_save": false
+    },
     "Python": {
       "tab_size": 4
     },

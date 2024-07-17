@@ -97,7 +97,7 @@
       "ctrl-shift-k": "zed::OpenKeymap",
       "alt-t": "theme_selector::Toggle",
       "shift shift shift": "command_palette::Toggle",
-      "ctrl-shift-space": "project_panel::ToggleFocus",
+      "alt-a": "project_panel::ToggleFocus",
       "ctrl-alt-shift-s": "workspace::SaveAll",
       "alt-enter": "language_selector::Toggle",
       "ctrl-shift-x": "zed::Extensions"

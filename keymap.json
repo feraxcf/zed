@@ -29,6 +29,7 @@
       "alt-2": "workspace::ToggleBottomDock",
       "alt-3": "workspace::ToggleRightDock",
       "ctrl-alt-space": "workspace::CloseAllDocks",
+      "ctrl-shift-t":"workspace::OpenInTerminal",
       "ctrl-shift-k": "zed::OpenKeymap",
       "ctrl-shift-f10": "task::Spawn",
       "shift-f10": "task::Rerun",
@@ -141,6 +142,12 @@
       "ctrl-n": "editor::ContextMenuNext",
       "pageup": "editor::ContextMenuFirst",
       "pagedown": "editor::ContextMenuLast"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "shift-f": "editor::Newline"
     }
   }
 ]

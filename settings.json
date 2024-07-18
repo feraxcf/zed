@@ -39,6 +39,9 @@
   "buffer_font_family": "JetBrains Mono",
   "terminal": {
     "font_family": "JetBrains Mono",
+    "shell": {
+      "program": "bash"
+    },
     "toolbar": {
       "title": false
     }
@@ -70,7 +73,7 @@
   
   "theme": {
     "mode": "system",
-    "light": "Rosé Pine Moon",
+    "light": "Catppuccin Mocha",
     "dark": "Catppuccin Macchiato"
   }
 }

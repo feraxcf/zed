@@ -33,7 +33,8 @@
       "ctrl-shift-k": "zed::OpenKeymap",
       "ctrl-shift-f10": "task::Spawn",
       "shift-f10": "task::Rerun",
-      "shift-f11": "zed::OpenLocalTasks"
+      "shift-f11": "zed::OpenLocalTasks",
+      "shift-f": "workspace::NewFile"
     }
   },
   {
@@ -41,7 +42,6 @@
     "bindings": {
       "enter": "editor::Newline",
       "alt-enter": "language_selector::Toggle",
-      "shift-f": "workspace::NewFile",
       "shift-enter": "editor::NewlineBelow",
       "ctrl-shift-enter": null,
       "ctrl-enter": "editor::NewlineAbove"
@@ -147,7 +147,8 @@
   {
     "context": "ProjectPanel",
     "bindings": {
-      "shift-f": "editor::Newline"
+      "enter": "project_panel::Open",
+      "shift-f": "project_panel::NewFile"
     }
   }
 ]

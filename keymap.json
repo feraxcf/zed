@@ -34,7 +34,8 @@
       "ctrl-shift-f10": "task::Spawn",
       "shift-f10": "task::Rerun",
       "shift-f11": "zed::OpenLocalTasks",
-      "shift-f": "workspace::NewFile"
+      "shift-f": "workspace::NewFile",
+      "ctrl-y": "editor::Redo"
     }
   },
   {

@@ -15,7 +15,8 @@
       "ensure_final_newline_on_save": false
     },
     "Python": {
-      "tab_size": 4
+      "tab_size": 4,
+      "ensure_final_newline_on_save": true
     },
     "JSONC": {
       "show_inline_completions": true,
@@ -70,7 +71,7 @@
   "soft_wrap": "none",
   "tab_size": 4,
   "remove_trailing_whitespace_on_save": false,
-  
+  "ensure_final_newline_on_save": false,
   "theme": {
     "mode": "system",
     "light": "Catppuccin Mocha",

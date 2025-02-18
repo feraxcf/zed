@@ -40,10 +40,21 @@
     }
   },
   {
+    "context": "AssistantPanel > Pane > ContextEditor > Editor",
+    "bindings": {
+      "alt-enter": "assistant::Assist"
+    }
+  },
+  {
+    "context": "Workspace > Pane > Editor",
+    "bindings": {
+      "alt-enter": "language_selector::Toggle"
+    }
+  },
+  {
     "context": "Editor && mode == full",
     "bindings": {
       "enter": "editor::Newline",
-      "alt-enter": "language_selector::Toggle",
       "shift-enter": "editor::NewlineBelow",
       "ctrl-shift-enter": null,
       "ctrl-enter": "editor::NewlineAbove"

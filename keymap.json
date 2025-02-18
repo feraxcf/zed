@@ -33,8 +33,9 @@
       "ctrl-shift-k": "zed::OpenKeymap",
       "ctrl-shift-f10": "task::Spawn",
       "shift-f10": "task::Rerun",
-      "shift-f11": "zed::OpenLocalTasks",
+      "shift-f11": "zed::OpenProjectTasks",
       "shift-f": "workspace::NewFile",
+      "ctrl-w": "pane::CloseActiveItem",
       "ctrl-y": "editor::Redo"
     }
   },

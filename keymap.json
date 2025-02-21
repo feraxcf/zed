@@ -45,7 +45,8 @@
   {
     "context": "AssistantPanel > Pane > ContextEditor > Editor",
     "bindings": {
-      "alt-enter": "assistant::Assist"
+      "alt-enter": "assistant::Assist",
+      "alt-s": "workspace::ToggleRightDock"
     }
   },
   {
@@ -115,6 +116,7 @@
       "alt-t": "theme_selector::Toggle",
       "shift shift shift": "command_palette::Toggle",
       "alt-a": "project_panel::ToggleFocus",
+      "alt-s": "assistant::ToggleFocus",
       "ctrl-alt-shift-s": "workspace::SaveAll",
       "alt-enter": "language_selector::Toggle",
       "ctrl-shift-x": "zed::Extensions"

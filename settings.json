@@ -81,7 +81,7 @@
   "ensure_final_newline_on_save": false,
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Mocha",
+    "light": "Catppuccin Latte",
     "dark": "Catppuccin Macchiato"
   }
 }

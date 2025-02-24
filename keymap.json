@@ -44,8 +44,7 @@
   {
     "context": "AssistantPanel > Pane > ContextEditor > Editor",
     "bindings": {
-      "alt-enter": "assistant::Assist",
-      "alt-s": "workspace::ToggleRightDock"
+      "alt-enter": "assistant::Assist"
     }
   },
   {

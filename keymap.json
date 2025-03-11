@@ -1,37 +1,34 @@
 [
+  // Workspace
   {
     "context": "Workspace",
     "bindings": {
       // Change the default action on `menu::Confirm` by setting the parameter
       // "alt-ctrl-o": ["projects::OpenRecent", { "create_new_window": true }],
-      "shift-t": "workspace::NewTerminal",
       "ctrl-s": "workspace::Save",
-      "ctrl-alt-s": "workspace::SaveWithoutFormat",
+      "shift-t": "workspace::NewTerminal",
       "ctrl-shift-s": "workspace::SaveAs",
-      "shift-f": "project_panel::NewFile",
-      "shift-d": "project_panel::NewDirectory",
       "ctrl-shift-n": "workspace::NewWindow",
       "alt-a": "project_panel::ToggleFocus",
       "alt-s": "terminal_panel::ToggleFocus",
       "alt-d": "assistant::ToggleFocus",
-      "ctrl-1": ["workspace::ActivatePane", 0],
-      "ctrl-2": ["workspace::ActivatePane", 1],
-      "ctrl-3": ["workspace::ActivatePane", 2],
-      "ctrl-4": ["workspace::ActivatePane", 3],
-      "ctrl-5": ["workspace::ActivatePane", 4],
-      "ctrl-6": ["workspace::ActivatePane", 5],
-      "ctrl-7": ["workspace::ActivatePane", 6],
-      "ctrl-8": ["workspace::ActivatePane", 7],
-      "ctrl-9": ["workspace::ActivatePane", 8],
+      "ctrl-1": null,// ["workspace::ActivatePane", 0],
+      "ctrl-2": null,// ["workspace::ActivatePane", 1],
+      "ctrl-3": null,// ["workspace::ActivatePane", 2],
+      "ctrl-4": null,// ["workspace::ActivatePane", 3],
+      "ctrl-5": null,// ["workspace::ActivatePane", 4],
+      "ctrl-6": null,// ["workspace::ActivatePane", 5],
+      "ctrl-7": null,// ["workspace::ActivatePane", 6],
+      "ctrl-8": null,// ["workspace::ActivatePane", 7],
+      "ctrl-9": null,// ["workspace::ActivatePane", 8],
       "ctrl-shift-k": "zed::OpenKeymap",
       "alt-t": "theme_selector::Toggle",
       "shift shift shift": "command_palette::Toggle",
       "ctrl-alt-shift-s": "workspace::SaveAll",
       "ctrl-shift-x": "zed::Extensions"
-      // "shift-r": "task::Rerun",
-      // "alt-shift-t": "task::Spawn"
     }
   },
+  // Editor
   {
     "context": "Editor && mode == full",
     "bindings": {
@@ -95,6 +92,7 @@
       "ctrl-space": "editor::ShowCompletions"
     }
   },
+  // Panels
   {
     "context": "Pane",
     "bindings": {
@@ -102,12 +100,29 @@
       "ctrl-shift-a": "search::ToggleSelection"
     }
   },
+  // Panels - ProjectPanel
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "enter": "project_panel::Open",
+      "shift-d": "project_panel::NewDirectory",
+      "shift-f": "project_panel::NewFile"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "a": "workspace::AddFolderToProject"
+    }
+  },
+  // Panels - AssistantPanel
   {
     "context": "AssistantPanel > Pane > ContextEditor > Editor",
     "bindings": {
       "alt-enter": "assistant::Assist"
     }
   },
+  // Panels - Terminal
   {
     "context": "Terminal",
     "bindings": {
@@ -120,13 +135,7 @@
       "ctrl-v": "terminal::Paste"
     }
   }, 
-  {
-    "context": "ProjectPanel",
-    "bindings": {
-      "enter": "project_panel::Open",
-      "shift-f": "project_panel::NewFile"
-    }
-  },
+  // General Purpose
   {
     "bindings": {
       "alt-u": "editor::ConvertToUpperCase",

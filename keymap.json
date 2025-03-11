@@ -1,93 +1,5 @@
 [
   {
-    "bindings": {
-      "alt-u": "editor::ConvertToUpperCase",
-      "alt-l": "editor::ConvertToLowerCase",
-      "ctrl-alt-shift-l": "editor::Format",
-      "alt-up": "editor::AddSelectionAbove",
-      "alt-down": "editor::AddSelectionBelow",
-      "shift-backspace": "editor::DeleteLine",
-      "shift-alt-up": "editor::MoveLineUp",
-      "shift-alt-down": "editor::MoveLineDown",
-      "ctrl-shift-up": "editor::DuplicateLineUp",
-      "ctrl-shift-down": "editor::DuplicateLineDown",
-      "ctrl-shift-c": [
-        "editor::ToggleComments",
-        {
-          "advance_downwards": true
-        }
-      ],
-      "f2": "editor::Rename",
-      "ctrl-space": "editor::ShowCompletions",
-      "ctrl-alt-c": "editor::CopyPath",
-      "alt-right": "pane::SplitRight",
-      "alt-left": "pane::SplitLeft",
-      "ctrl-m ctrl-p": "markdown::OpenPreviewToTheSide",
-      "ctrl-m ctrl-o": "markdown::OpenPreview",
-      "alt-q": "workspace::ToggleLeftDock",
-      "alt-w": "workspace::ToggleBottomDock",
-      "alt-e": "workspace::ToggleRightDock",
-      "ctrl-alt-space": "workspace::CloseAllDocks",
-      "ctrl-shift-t":"workspace::OpenInTerminal",
-      "ctrl-shift-k": "zed::OpenKeymap",
-      "ctrl-shift-f10": "task::Spawn",
-      "shift-f10": "task::Rerun",
-      "shift-f11": "zed::OpenProjectTasks",
-      "shift-f": "workspace::NewFile",
-      "ctrl-w": "pane::CloseActiveItem",
-      "ctrl-y": "editor::Redo",
-      "shift-x": "project_panel::RemoveFromProject",
-      "shift-a": "workspace::AddFolderToProject",
-      "shift-z": "projects::OpenRecent"
-    }
-  },
-  {
-    "context": "AssistantPanel > Pane > ContextEditor > Editor",
-    "bindings": {
-      "alt-enter": "assistant::Assist"
-    }
-  },
-  {
-    "context": "Workspace > Pane > Editor",
-    "bindings": {
-      "alt-enter": "language_selector::Toggle"
-    }
-  },
-  {
-    "context": "Editor && mode == full",
-    "bindings": {
-      "enter": "editor::Newline",
-      "shift-enter": "editor::NewlineBelow",
-      "ctrl-shift-enter": null,
-      "ctrl-enter": "editor::NewlineAbove"
-    }
-  },
-  {
-    "context": "Editor && !inline_completion",
-    "bindings": {
-      "ctrl-space": "editor::ShowCompletions"
-    }
-  },
-  {
-    "context": "Pane",
-    "bindings": {
-      "shift-a": "search::SelectAllMatches",
-      "ctrl-shift-a": "search::ToggleSelection"
-    }
-  },
-  {
-    "context": "Terminal",
-    "bindings": {
-      "ctrl-w": ["terminal::SendKeystroke", "ctrl-w"],
-      "ctrl-e": ["terminal::SendKeystroke", "ctrl-e"],
-      "ctrl-shift-c": ["terminal::SendKeystroke", "ctrl-c"],
-      "ctrl-shift-v": ["terminal::SendKeystroke", "ctrl-v"],
-      "ctrl-c": "terminal::Copy",
-      "ctrl-insert": "terminal::Copy",
-      "ctrl-v": "terminal::Paste"
-    }
-  },
-  {
     "context": "Workspace",
     "bindings": {
       // Change the default action on `menu::Confirm` by setting the parameter
@@ -115,17 +27,29 @@
       "alt-t": "theme_selector::Toggle",
       "shift shift shift": "command_palette::Toggle",
       "ctrl-alt-shift-s": "workspace::SaveAll",
-      "alt-enter": "language_selector::Toggle",
       "ctrl-shift-x": "zed::Extensions"
       // "shift-r": "task::Rerun",
       // "alt-shift-t": "task::Spawn"
     }
   },
-  // Bindings that should be unified with bindings for more general actions
   {
-    "context": "Editor && renaming",
+    "context": "Editor && mode == full",
     "bindings": {
-      "enter": "editor::ConfirmRename",
+      "enter": "editor::Newline",
+      "shift-enter": "editor::NewlineBelow",
+      "ctrl-shift-enter": null,
+      "ctrl-enter": "editor::NewlineAbove"
+    }
+  },
+  {
+    "context": "Editor && !extension",
+    "bindings": {
+      "alt-enter": "language_selector::Toggle"
+    }
+  },
+  {
+    "context": "Editor && !inline_completion",
+    "bindings": {
       "ctrl-space": "editor::ShowCompletions"
     }
   },
@@ -139,7 +63,7 @@
   {
     "context": "Editor && inline_completion && !showing_completions",
     "bindings": {
-      "tab": "editor::AcceptInlineCompletion"
+      "tab": "editor::AcceptEditPrediction"
     }
   },
   {
@@ -151,8 +75,7 @@
   {
     "context": "Editor && (showing_code_actions || showing_completions)",
     "bindings": {
-      "up": "editor::ContextMenuPrev",
-      "ctrl-p": "editor::ContextMenuPrev",
+      "up": "editor::ContextMenuPrevious",
       "down": "editor::ContextMenuNext",
       "ctrl-n": "editor::ContextMenuNext",
       "pageup": "editor::ContextMenuFirst",
@@ -160,10 +83,90 @@
     }
   },
   {
+    "context": "Editor && edit_prediction",
+    "bindings": { 
+      "tab": "editor::AcceptEditPrediction"
+    }
+  },
+  {
+    "context": "Editor && renaming",
+    "bindings": {
+      "enter": "editor::ConfirmRename",
+      "ctrl-space": "editor::ShowCompletions"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "shift-a": "search::SelectAllMatches",
+      "ctrl-shift-a": "search::ToggleSelection"
+    }
+  },
+  {
+    "context": "AssistantPanel > Pane > ContextEditor > Editor",
+    "bindings": {
+      "alt-enter": "assistant::Assist"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-w": ["terminal::SendKeystroke", "ctrl-w"],
+      "ctrl-e": ["terminal::SendKeystroke", "ctrl-e"],
+      "ctrl-shift-c": ["terminal::SendKeystroke", "ctrl-c"],
+      "ctrl-shift-v": ["terminal::SendKeystroke", "ctrl-v"],
+      "ctrl-c": "terminal::Copy",
+      "ctrl-insert": "terminal::Copy",
+      "ctrl-v": "terminal::Paste"
+    }
+  }, 
+  {
     "context": "ProjectPanel",
     "bindings": {
       "enter": "project_panel::Open",
       "shift-f": "project_panel::NewFile"
+    }
+  },
+  {
+    "bindings": {
+      "alt-u": "editor::ConvertToUpperCase",
+      "alt-l": "editor::ConvertToLowerCase",
+      "ctrl-alt-shift-l": "editor::Format",
+      "alt-up": "editor::AddSelectionAbove",
+      "alt-down": "editor::AddSelectionBelow",
+      "shift-backspace": "editor::DeleteLine",
+      "shift-alt-up": "editor::MoveLineUp",
+      "shift-alt-down": "editor::MoveLineDown",
+      "ctrl-shift-up": "editor::DuplicateLineUp",
+      "ctrl-shift-down": "editor::DuplicateLineDown",
+      "ctrl-shift-c": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": true
+        }
+      ],
+      "f2": "editor::Rename",
+      "ctrl-space": "editor::ShowCompletions",
+      "ctrl-alt-c": "workspace::CopyPath",
+      "alt-right": "pane::SplitRight",
+      "alt-left": "pane::SplitLeft",
+      "ctrl-m ctrl-p": "markdown::OpenPreviewToTheSide",
+      "ctrl-m ctrl-o": "markdown::OpenPreview",
+      "alt-q": "workspace::ToggleLeftDock",
+      "alt-w": "workspace::ToggleBottomDock",
+      "alt-e": "workspace::ToggleRightDock",
+      "ctrl-alt-space": "workspace::CloseAllDocks",
+      "ctrl-shift-t":"workspace::OpenInTerminal",
+      "ctrl-shift-k": "zed::OpenKeymap",
+      "ctrl-shift-f10": "task::Spawn",
+      "shift-f10": "task::Rerun",
+      "shift-f11": "zed::OpenProjectTasks",
+      "shift-f": "workspace::NewFile",
+      "ctrl-w": "pane::CloseActiveItem",
+      "ctrl-y": "editor::Redo",
+      "shift-x": "project_panel::RemoveFromProject",
+      "shift-a": "workspace::AddFolderToProject",
+      "shift-z": "projects::OpenRecent"
     }
   }
 ]

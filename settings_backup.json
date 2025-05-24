@@ -1,0 +1,91 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
+  "icon_theme": "Catppuccin Latte",
+  "agent": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4.1"
+    },
+    "version": "2"
+  },
+  "languages": {
+    "Plain Text": {
+      "remove_trailing_whitespace_on_save": false,
+      "format_on_save": "off",
+      "tab_size": 4,
+      "ensure_final_newline_on_save": false
+    },
+    "Python": {
+      "tab_size": 4,
+      "ensure_final_newline_on_save": true
+    },
+    "JSONC": {
+      "show_edit_predictions": true,
+      "tab_size": 2
+    },
+    "JSON": {
+      "remove_trailing_whitespace_on_save": false,
+      "format_on_save": "off",
+      "tab_size": 4,
+      "show_edit_predictions": false,
+      "ensure_final_newline_on_save": false
+    },
+    "Markdown": {
+      "enable_language_server": true
+    }
+  },
+  "autosave": "on_focus_change",
+  "base_keymap": "JetBrains",
+  "ui_font_size": 15,
+  "buffer_font_size": 12,
+  "buffer_font_family": "JetBrains Mono",
+  "terminal": {
+    "font_family": "JetBrains Mono",
+    "shell": {
+      "program": "s:/Program Files/Git/bin/bash.exe"
+    },
+    "toolbar": {
+      "title": false
+    }
+  },
+  "direnv": "shell_hook",
+  "scrollbar": {
+    "show": "auto"
+  },
+  "tab_bar": {
+    "show": false,
+    "show_nav_history_buttons": false
+  },
+  "tabs": {
+    "git_status": true
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": false,
+    "selections_menu": true
+  },
+  "indent_guides": {
+    "coloring": "indent_aware"
+  },
+  "format_on_save": "off",
+  "show_whitespaces": "all",
+  "soft_wrap": "none",
+  "tab_size": 4,
+  "remove_trailing_whitespace_on_save": false,
+  "ensure_final_newline_on_save": false,
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Mocha - No Italics",
+    "dark": "Catppuccin Latte - No Italics"
+  }
+}

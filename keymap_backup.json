@@ -1,36 +1,18 @@
 [
-  // Disables
-  {
-    "context": "Editor && mode == full",
-    "bindings": {
-      "ctrl-shift-o": null,// "outline::Toggle",
-      "ctrl-g": null,//"go_to_line::Toggle",
-      "ctrl-shift-n": "workspace::NewWindow"
-    }
-  },
-  {
-    "context": "Editor && mode == full && edit_prediction",
-    "bindings": {
-      "alt-right": null
-    }
-  },
   // Workspace
   {
     "context": "Workspace",
     "bindings": {
+      // Change the default action on `menu::Confirm` by setting the parameter
+      // "alt-ctrl-o": ["projects::OpenRecent", { "create_new_window": true }],
       "ctrl-s": "workspace::Save",
       "shift-t": "workspace::NewTerminal",
       "ctrl-shift-s": "workspace::SaveAs",
       "ctrl-shift-n": "workspace::NewWindow",
       "alt-a": "project_panel::ToggleFocus",
-      "alt-q": "workspace::ToggleLeftDock",
       "alt-s": "terminal_panel::ToggleFocus",
-      "alt-w": "workspace::ToggleBottomDock",
-      "alt-d": "agent::NewTextThread", // Editable
-      "alt-e": "workspace::ToggleRightDock",
+      "alt-d": "assistant::ToggleFocus",
       "shift-f": "workspace::NewFile",
-      "alt-left": "workspace::ActivatePaneLeft",
-      "alt-right": "workspace::ActivatePaneRight",
       "ctrl-1": null,// ["workspace::ActivatePane", 0],
       "ctrl-2": null,// ["workspace::ActivatePane", 1],
       "ctrl-3": null,// ["workspace::ActivatePane", 2],
@@ -58,19 +40,29 @@
       "alt-z": "zeta::PreviewCompletion"
     }
   },
-  // Suggestions
+  // File extensions (file specific)
   {
-    "context": "Editor && mode == full && edit_prediction",
+    "context": "Editor && !extension",
     "bindings": {
-      "alt-l": "editor::NextEditPrediction",
-      "alt-j": "editor::PreviousEditPrediction",
-      "alt-shift-right": "editor::AcceptPartialEditPrediction"
+      "alt-enter": "language_selector::Toggle"
     }
   },
   {
-    "context": "Editor && !showing_completions && edit_prediction",
+    "context": "Editor && extension == css",
     "bindings": {
-      "tab": "editor::AcceptEditPrediction",
+      "shift-v": ["workspace::SendKeystrokes", "var() left"]
+    }
+  },
+  {
+    "context": "Editor && extension == js",
+    "bindings": {
+      "shift-l": ["workspace::SendKeystrokes", "ctrl-c shift-enter console.log( ' ctrl-v :', ctrl-v ) shift-right ;"]
+    }
+  },
+  // Suggestions
+  {
+    "context": "Editor && !inline_completion",
+    "bindings": {
       "ctrl-space": "editor::ShowCompletions"
     }
   },
@@ -81,27 +73,62 @@
       "tab": "editor::ConfirmCompletion"
     }
   },
+  {
+    "context": "Editor && inline_completion && !showing_completions",
+    "bindings": {
+      "tab": "editor::AcceptEditPrediction"
+    }
+  },
+  {
+    "context": "Editor && showing_code_actions",
+    "bindings": {
+      "enter": "editor::ConfirmCodeAction"
+    }
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "up": "editor::ContextMenuPrevious",
+      "down": "editor::ContextMenuNext",
+      "ctrl-n": "editor::ContextMenuNext",
+      "pageup": "editor::ContextMenuFirst",
+      "pagedown": "editor::ContextMenuLast"
+    }
+  },
+  {
+    "context": "Editor && !edit_prediction",
+    "bindings": {
+      "alt-tab": "editor::ShowEditPrediction"
+    }
+  },
+  {
+    "context": "Editor && edit_prediction",
+    "bindings": { 
+      "tab": "editor::AcceptEditPrediction"
+    }
+  },
   // Other staff
   {
     "context": "Editor && renaming",
     "bindings": {
-      "enter": "editor::ConfirmRename"
+      "enter": "editor::ConfirmRename",
+      "ctrl-space": "editor::ShowCompletions"
     }
   },
   // Panels
+  {
+    "context": "Pane",
+    "bindings": {
+      "shift-a": "search::SelectAllMatches",
+      "ctrl-shift-a": "search::ToggleSelection"
+    }
+  },
   // Panels - ProjectPanel
   {
     "context": "ProjectPanel",
     "bindings": {
-      "enter": "project_panel::OpenPermanent",
+      "enter": "project_panel::Open",
       "shift-d": "project_panel::NewDirectory"
-    }
-  },
-  {
-    "context": "ProjectPanel && not_editing",
-    "bindings": {
-      "shift-f": "project_panel::NewFile",
-      "a": "workspace::AddFolderToProject"
     }
   },
   {
@@ -113,7 +140,7 @@
   },
   // Panels - AssistantPanel
   {
-    "context": "AgentPanel > ContextEditor > Editor && !extension",
+    "context": "AssistantPanel > Pane > ContextEditor > Editor",
     "bindings": {
       "alt-enter": "assistant::Assist"
     }
@@ -131,25 +158,6 @@
       "ctrl-v": "terminal::Paste"
     }
   }, 
-  // File extensions (file specific)
-  {
-    "context": "Pane > Editor && !extension",
-    "bindings": {
-      "alt-enter": "language_selector::Toggle"
-    }
-  },
-  {
-    "context": "Editor && extension == css",
-    "bindings": {
-      "shift-v": ["workspace::SendKeystrokes", "var() left"]
-    }
-  },
-  {
-    "context": "Editor && extension == js",
-    "bindings": {
-      "shift-l": ["workspace::SendKeystrokes", "ctrl-c shift-enter console.log( ' ctrl-v :', ctrl-v ) shift-right ;"]
-    }
-  },
   // General Purpose
   {
     "bindings": {

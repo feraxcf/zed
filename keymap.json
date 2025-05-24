@@ -153,8 +153,7 @@
   // General Purpose
   {
     "bindings": {
-      "alt-u": "editor::ConvertToUpperCase",
-      "alt-l": "editor::ConvertToLowerCase",
+      "ctrl-shift-u": "editor::ToggleCase",
       "ctrl-alt-shift-l": "editor::Format",
       "alt-up": "editor::AddSelectionAbove",
       "alt-down": "editor::AddSelectionBelow",
@@ -172,8 +171,8 @@
       "f2": "editor::Rename",
       "ctrl-space": "editor::ShowCompletions",
       "ctrl-alt-c": "workspace::CopyPath",
-      "alt-right": "pane::SplitRight",
-      "alt-left": "pane::SplitLeft",
+      "alt-l": "pane::SplitRight",
+      "alt-j": "pane::SplitLeft",
       "ctrl-m ctrl-p": "markdown::OpenPreviewToTheSide",
       "ctrl-m ctrl-o": "markdown::OpenPreview",
       "ctrl-alt-space": "workspace::CloseAllDocks",

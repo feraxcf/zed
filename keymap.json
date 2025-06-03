@@ -60,6 +60,13 @@
       "alt-z": "zeta::PreviewCompletion"
     }
   },
+  // Search
+  {
+    "context": "BufferSearchBar > Editor",
+    "bindings": {
+      "shift-r": "search::ToggleReplace"
+    }
+  },
   // Suggestions
   {
     "context": "Editor && mode == full && edit_prediction",

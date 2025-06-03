@@ -83,6 +83,12 @@
       "tab": "editor::ConfirmCompletion"
     }
   },
+  {
+    "context": "Editor && menu && showing_code_actions",
+    "bindings": {
+      "enter": "editor::ConfirmCodeAction"
+    }
+  },
   // Other staff
   {
     "context": "Editor && renaming",

@@ -62,7 +62,7 @@
   },
   // Search
   {
-    "context": "BufferSearchBar > Editor",
+    "context": "(ProjectSearchBar || BufferSearchBar) > Editor",
     "bindings": {
       "shift-r": "search::ToggleReplace"
     }

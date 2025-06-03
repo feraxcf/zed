@@ -83,7 +83,7 @@
   "confirm_quit": false,
   "direnv": "shell_hook",
   "hide_mouse": "on_typing",
-  "snippet_sort_order": "top",
+  "snippet_sort_order": "bottom",
   "scrollbar": { "show": "always" },
   "minimap": {
     "show": "always",

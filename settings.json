@@ -36,6 +36,7 @@
   },
   
   "agent": {
+    "default_view": "text_thread",
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-3.5-sonnet"

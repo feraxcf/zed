@@ -26,7 +26,7 @@
       "alt-q": "workspace::ToggleLeftDock",
       "alt-s": "terminal_panel::ToggleFocus",
       "alt-w": "workspace::ToggleBottomDock",
-      "alt-d": "agent::NewTextThread", // Editable
+      "alt-d": "agent::ToggleFocus",
       "alt-e": "workspace::ToggleRightDock",
       "shift-f": "workspace::NewFile",
       "alt-left": "workspace::ActivatePaneLeft",
@@ -162,7 +162,8 @@
   {
     "context": "Editor && extension == js",
     "bindings": {
-      "shift-l": ["workspace::SendKeystrokes", "ctrl-c shift-enter console.log( ' ctrl-v :', ctrl-v ) shift-right ;"]
+      "shift-l": ["workspace::SendKeystrokes", "ctrl-c shift-enter console.log( ' ctrl-v :', ctrl-v ) shift-right ;"],
+      "ctrl-shift-b": ["workspace::SendKeystrokes", "ctrl-x /* ctrl-v "] // Temporary: Add block comment
     }
   },
   // General Purpose

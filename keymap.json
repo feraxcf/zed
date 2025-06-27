@@ -160,7 +160,7 @@
     }
   },
   {
-    "context": "Editor && extension == js",
+    "context": "Editor && ( extension == js || extension == rs )",
     "bindings": {
       "shift-l": ["workspace::SendKeystrokes", "ctrl-c shift-enter console.log( ' ctrl-v :', ctrl-v ) shift-right ;"],
       "ctrl-shift-b": ["workspace::SendKeystrokes", "ctrl-x /* ctrl-v "] // Temporary: Add block comment

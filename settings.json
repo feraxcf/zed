@@ -158,7 +158,7 @@
   "terminal": {
     "font_family": "JetBrains Mono",
     "shell": {
-      "program": "s:/Program Files/Git/bin/bash.exe"
+      "program": "c:/Program Files/Git/bin/bash.exe"
     },
     "env": { "ZED": "1" },
     "font_size": 13

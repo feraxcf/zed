@@ -7,17 +7,44 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  // Look for the "Zed"
+  "theme": {
+    "mode": "dark",
+    "light": "Catppuccin Latte - No Italics",
+    "dark": "Catppuccin Mocha - No Italics"
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Latte"
+  },
+  "active_pane_modifiers": {
+    "magnification": 1.0,
+    "border_size": 0.9,
+    "inactive_opacity": 0.8
+  },
+  
+  // Extension settings
+  "auto_install_extensions": {
+    "catppuccin": true,
+    "catppuccin-icons": true
+  },
+  
+  // Agent configuration
   "features": {
     "edit_prediction_provider": "copilot"
   },
-  "icon_theme": "Catppuccin Latte",
+  
   "agent": {
+    "default_view": "text_thread",
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4.1"
+      "provider": "google",
+      "model": "gemini-2.5-flash"
     },
     "version": "2"
   },
+  
+  // Language-specific settings
   "languages": {
     "Plain Text": {
       "remove_trailing_whitespace_on_save": false,
@@ -42,31 +69,51 @@
     },
     "Markdown": {
       "enable_language_server": true
+    },
+    "Emmet": {
+      "language_servers": ["emmet-language-server"]
     }
   },
+  "lsp": {
+    "emmet-language-server": {
+      "binary": {
+        "path": "C:\\Program Files\\nodejs\\node.exe",
+        "arguments": [
+          "C:\\Users\\feraxhp\\AppData\\Local\\Zed\\extensions\\work\\emmet\\node_modules\\@olrtg\\emmet-language-server\\dist\\index.js",
+          "--stdio"
+        ]
+      }
+    }
+  },
+  
+  // General settings
   "autosave": "on_focus_change",
+  "restore_on_startup": "none",
+  "auto_update": false, // This will change when Zed is released 4 windows
   "base_keymap": "JetBrains",
   "ui_font_size": 15,
-  "buffer_font_size": 12,
+  "buffer_font_size": 15.0,
   "buffer_font_family": "JetBrains Mono",
-  "terminal": {
-    "font_family": "JetBrains Mono",
-    "shell": {
-      "program": "s:/Program Files/Git/bin/bash.exe"
-    },
-    "toolbar": {
-      "title": false
-    }
-  },
+  "buffer_font_fallbacks": ["Cascadia Mono"],
+  "confirm_quit": false,
   "direnv": "shell_hook",
-  "scrollbar": {
-    "show": "auto"
+  "hide_mouse": "on_typing",
+  "snippet_sort_order": "bottom",
+  "scrollbar": { "show": "always" },
+  "minimap": {
+    "show": "always",
+    "thumb": "hover",
+    "thumb_border": "none",
+    "current_line_highlight": "none"
   },
   "tab_bar": {
-    "show": false,
-    "show_nav_history_buttons": false
+    "show": false, // For aesthetic reasons
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": false
   },
   "tabs": {
+    "close_position": "right",
+    "file_icons": false,
     "git_status": true
   },
   "toolbar": {
@@ -74,18 +121,61 @@
     "quick_actions": false,
     "selections_menu": true
   },
-  "indent_guides": {
-    "coloring": "indent_aware"
-  },
   "format_on_save": "off",
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+      "update_debounce_ms": 100,
+      "padding": 4,
+      "min_column": 90,
+      "max_severity": "warning"
+    },
+    "include_warnings": true
+  },
+  "git": {
+    "git_gutter": "tracked_files",
+    "gutter_debounce": 100,
+    "inline_blame": {
+      "enabled": true,
+      "min_column": 40,
+      "delay_ms": 0,
+      "show_commit_summary": true
+    },
+    "hunk_style": "unstaged_hollow"
+  },
+  "indent_guides": {
+    "line_width": 1,
+    "active_line_width": 1,
+    "coloring": "indent_aware",
+    "background_coloring": "disabled"
+  },
+  "hard_tabs": false,
+  "inlay_hints": { // This is for trying out the inlay hints
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "show_background": false,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50,
+    "toggle_on_modifiers_press": null
+  },
+  "remove_trailing_whitespace_on_save": false,
+  "ensure_final_newline_on_save": false,
   "show_whitespaces": "all",
   "soft_wrap": "none",
   "tab_size": 4,
-  "remove_trailing_whitespace_on_save": false,
-  "ensure_final_newline_on_save": false,
-  "theme": {
-    "mode": "system",
-    "light": "Catppuccin Mocha - No Italics",
-    "dark": "Catppuccin Latte - No Italics"
-  }
+  "telemetry": { // Disable telemetry when Zed is released 4 windows
+    "diagnostics": true,
+    "metrics": true
+  },
+  "terminal": {
+    "font_family": "JetBrains Mono",
+    "shell": {
+      "program": "c:/Program Files/Git/bin/bash.exe"
+    },
+    "env": { "ZED": "1" },
+    "font_size": 13
+  },
+  "unnecessary_code_fade": 0.8
 }

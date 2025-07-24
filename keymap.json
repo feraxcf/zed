@@ -42,6 +42,11 @@
       "ctrl-7": null,// ["workspace::ActivatePane", 6],
       "ctrl-8": null,// ["workspace::ActivatePane", 7],
       "ctrl-9": null,// ["workspace::ActivatePane", 8],
+      "ctrl-alt--": null, // ["workspace::DecreaseActiveDockSize", { "px": 0 }],
+      "ctrl-alt-=": null, // ["workspace::IncreaseActiveDockSize", { "px": 0 }],
+      "ctrl-alt-)": null, // "workspace::ResetOpenDocksSize",
+      "ctrl-alt-_": null, // ["workspace::DecreaseOpenDocksSize", { "px": 0 }],
+      "ctrl-alt-+": null, // ["workspace::IncreaseOpenDocksSize", { "px": 0 }],
       "ctrl-shift-k": "zed::OpenKeymap",
       "alt-t": "theme_selector::Toggle",
       "shift shift shift": "command_palette::Toggle",
@@ -156,7 +161,8 @@
   {
     "context": "Editor && extension == css",
     "bindings": {
-      "shift-v": ["workspace::SendKeystrokes", "var() left"]
+      "shift-v": ["workspace::SendKeystrokes", "var() left"],
+      "shift-l": ["workspace::SendKeystrokes", "light - dark() left"]
     }
   },
   {
@@ -203,7 +209,8 @@
       "ctrl-y": "editor::Redo",
       "shift-x": "project_panel::RemoveFromProject",
       "shift-a": "workspace::AddFolderToProject",
-      "shift-z": "projects::OpenRecent"
+      "shift-z": "projects::OpenRecent",
+      "ctrl-q": null
     }
   }
 ]

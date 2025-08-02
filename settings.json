@@ -68,6 +68,12 @@
     "Markdown": {
       "enable_language_server": true
     },
+    "JavaScript": {
+      "tab_size": 2
+    },
+    "TypeScript": {
+      "tab_size": 2
+    },
     "HTML": {
       "language_servers": ["emmet-language-server"]
     }
@@ -75,7 +81,7 @@
   "lsp": {
     "emmet-language-server": {
       "binary": {
-        "path": "C:\\Program Files\\nodejs\\node.exe",
+        "path": "node.exe",
         "arguments": [
           "C:\\Users\\feraxhp\\AppData\\Local\\Zed\\extensions\\work\\emmet\\node_modules\\@olrtg\\emmet-language-server\\dist\\index.js",
           "--stdio"

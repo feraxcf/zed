@@ -29,10 +29,6 @@
       "alt-d": "agent::ToggleFocus",
       "alt-e": "workspace::ToggleRightDock",
       "shift-f": "workspace::NewFile",
-      "alt-left": "workspace::ActivatePaneLeft",
-      "alt-ctrl-up": "workspace::ActivatePaneUp",
-      "alt-ctrl-down": "workspace::ActivatePaneDown",
-      "alt-right": "workspace::ActivatePaneRight",
       "ctrl-1": null,// ["workspace::ActivatePane", 0],
       "ctrl-2": null,// ["workspace::ActivatePane", 1],
       "ctrl-3": null,// ["workspace::ActivatePane", 2],
@@ -210,7 +206,11 @@
       "shift-x": "project_panel::RemoveFromProject",
       "shift-a": "workspace::AddFolderToProject",
       "shift-z": "projects::OpenRecent",
-      "ctrl-q": null
+      "ctrl-q": null,
+      "alt-left": "workspace::ActivatePaneLeft",
+      "alt-ctrl-up": "workspace::ActivatePaneUp",
+      "alt-ctrl-down": "workspace::ActivatePaneDown",
+      "alt-right": "workspace::ActivatePaneRight",
     }
   }
 ]

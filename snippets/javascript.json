@@ -44,5 +44,9 @@
       "}"
     ],
     "description": "Creates an async function"
+  },
+  "document": {
+    "prefix": "doc",
+    "body": ["document"]
   }
 }

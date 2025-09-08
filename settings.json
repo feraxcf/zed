@@ -96,7 +96,9 @@
   // General settings
   "autosave": "on_focus_change",
   "restore_on_startup": "none",
+  "starts_open": false,
   "auto_update": false, // This will change when Zed is released 4 windows
+  "use_system_prompts": false,
   "base_keymap": "None",
   "ui_font_size": 15,
   "buffer_font_size": 12.0,

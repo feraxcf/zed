@@ -47,6 +47,17 @@
   },
   "document": {
     "prefix": "doc",
+    "description": "DOM document",
     "body": ["document"]
+  },
+  "HTMLElement": {
+    "prefix": "he",
+    "description": "HTMLElement type",
+    "body": ["HTMLElement"]
+  },
+  "HTML_Element": {
+    "prefix": "hel",
+    "description": "HTMLElement type",
+    "body": ["HTML$1Element$0"]
   }
 }

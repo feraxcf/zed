@@ -582,7 +582,7 @@
       "ctrl-e": "file_finder::Toggle",
       "f1": "command_palette::Toggle",
       "ctrl-shift-p": "command_palette::Toggle",
-      "ctrl-shift-m": "diagnostics::Deploy",
+      // "ctrl-shift-m": "diagnostics::Deploy",
       "ctrl-shift-e": "project_panel::ToggleFocus",
       "ctrl-shift-b": "outline_panel::ToggleFocus",
       "ctrl-shift-g": "git_panel::ToggleFocus",
@@ -676,7 +676,7 @@
   {
     "context": "Editor && edit_prediction",
     "bindings": {
-      "alt-tab": "editor::AcceptEditPrediction",
+      "tab": "editor::AcceptEditPrediction",
       "alt-l": "editor::AcceptEditPrediction",
       "tab": "editor::AcceptEditPrediction",
       "alt-right": "editor::AcceptPartialEditPrediction"
@@ -1042,10 +1042,16 @@
       "shift-down": "terminal::ScrollLineDown",
       "shift-home": "terminal::ScrollToTop",
       "shift-end": "terminal::ScrollToBottom",
-      "ctrl-shift-space": "terminal::ToggleViMode",
+      "ctrl-shift-m": "terminal::ToggleViMode",
       "ctrl-shift-r": "terminal::RerunTask",
       "ctrl-alt-r": "terminal::RerunTask",
       "alt-t": "terminal::RerunTask"
+    }
+  },
+  {
+    "context": "Terminal && vi_mode",
+    "bindings": {
+      "escape": "terminal::ToggleViMode"
     }
   },
   {

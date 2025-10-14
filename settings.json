@@ -69,6 +69,7 @@
       "ensure_final_newline_on_save": false
     },
     "Markdown": {
+      "show_edit_predictions": false,
       "enable_language_server": true
     },
     "JavaScript": {
@@ -179,6 +180,7 @@
     "metrics": true
   },
   "terminal": {
+    "keep_selection_on_copy": false,
     "font_family": "JetBrains Mono",
     "shell": {
       "program": "c:/Program Files/Git/bin/bash.exe"

@@ -8,6 +8,13 @@
 // from the command palette or from `Zed` application menu.
 {
   // Look for the "Zed"
+  "title_bar": {
+    "show_onboarding_banner": true,
+    "show_user_picture": true,
+    "show_menus": false,
+    "show_branch_icon": true
+  },
+  "ui_font_family": ".ZedSans",
   "theme": {
     "mode": "system",
     "light": "Catppuccin Latte - No Italics",
@@ -98,7 +105,7 @@
   "autosave": "on_focus_change",
   "restore_on_startup": "none",
   "starts_open": false,
-  "auto_update": false, // This will change when Zed is released 4 windows
+  "auto_update": true, // This will change when Zed is released 4 windows
   "use_system_prompts": false,
   "base_keymap": "None",
   "ui_font_size": 15,
@@ -180,6 +187,7 @@
     "metrics": true
   },
   "terminal": {
+    "working_directory": "always_home",
     "keep_selection_on_copy": false,
     "font_family": "JetBrains Mono",
     "shell": {
@@ -188,5 +196,13 @@
     "env": { "ZED": "1" },
     "font_size": 13
   },
-  "unnecessary_code_fade": 0.8
+  "unnecessary_code_fade": 0.8,
+  "ssh_connections": [
+    {
+      "host": "home.sv",
+      "nickname": "feraxsv",
+      "username": "feraxhp",
+      "upload_binary_over_ssh": true
+    }
+  ]
 }

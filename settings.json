@@ -7,7 +7,45 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  // Look for the "Zed"
+  // languaje models
+  "language_models": {
+    "openai_compatible": {
+      "OpenWebUi": {
+        "api_url": "https://lsm.feraxhp.com/ollama/v1",
+        "available_models": [
+          {
+            "name": "gemma3:12b",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false
+            }
+          },
+          {
+            "name": "gpt-oss:20b",
+            "max_tokens": 200000,
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false
+            }
+          }
+        ]
+      }
+    }
+  },
+  "message_editor": {
+    "auto_replace_emoji_shortcode": true
+  },
+  
+  // look for zed
   "title_bar": {
     "show_onboarding_banner": true,
     "show_user_picture": true,
@@ -18,7 +56,7 @@
   "theme": {
     "mode": "system",
     "light": "Catppuccin Latte - No Italics",
-    "dark": "Catppuccin Mocha - No Italics"
+    "dark": "Catppuccin Macchiato - No Italics"
   },
   "icon_theme": {
     "mode": "system",
@@ -45,7 +83,7 @@
     "default_view": "text_thread",
     "default_model": {
       "provider": "google",
-      "model": "gemini-2.0-flash"
+      "model": "gemini-2.5-pro"
     }
   },
   
@@ -59,6 +97,7 @@
     },
     "Python": {
       "tab_size": 4,
+      "format_on_save": "off",
       "ensure_final_newline_on_save": true
     },
     "JSONC": {
@@ -89,17 +128,6 @@
       "language_servers": ["emmet-language-server"]
     }
   },
-  "lsp": {
-    "emmet-language-server": {
-      "binary": {
-        "path": "node.exe",
-        "arguments": [
-          "C:\\Users\\feraxhp\\AppData\\Local\\Zed\\extensions\\work\\emmet\\node_modules\\@olrtg\\emmet-language-server\\dist\\index.js",
-          "--stdio"
-        ]
-      }
-    }
-  },
   
   // General settings
   "autosave": "on_focus_change",
@@ -111,7 +139,7 @@
   "ui_font_size": 15,
   "buffer_font_size": 12.0,
   "buffer_font_family": "JetBrains Mono",
-  "buffer_font_fallbacks": ["Cascadia Mono"],
+  "buffer_font_fallbacks": [".ZedMono", "JetBrainsMono Nerd Font", "Cascadia Mono"],
   "confirm_quit": false,
   "load_direnv": "shell_hook",
   "hide_mouse": "on_typing",
@@ -187,12 +215,9 @@
     "metrics": true
   },
   "terminal": {
-    "working_directory": "always_home",
+    "working_directory": "current_project_directory",
     "keep_selection_on_copy": false,
     "font_family": "JetBrains Mono",
-    "shell": {
-      "program": "c:/Program Files/Git/bin/bash.exe"
-    },
     "env": { "ZED": "1" },
     "font_size": 13
   },
@@ -200,9 +225,24 @@
   "ssh_connections": [
     {
       "host": "home.sv",
-      "nickname": "feraxsv",
       "username": "feraxhp",
-      "upload_binary_over_ssh": true
+      "port": 2222,
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/feraxhp/projects/pprojects/grp/./"
+          ]
+        }
+      ],
+      "nickname": "fedorax",
+      "upload_binary_over_ssh": true,
+      "port_forwards": [
+        {
+          "local_port": 5173,
+          "remote_port": 5173
+        }
+      ]
     }
   ]
 }

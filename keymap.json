@@ -1268,6 +1268,7 @@
       "ctrl-e": ["terminal::SendKeystroke", "ctrl-e"],
       "ctrl-shift-c": ["terminal::SendKeystroke", "ctrl-c"],
       "ctrl-shift-v": ["terminal::SendKeystroke", "ctrl-v"],
+      "ctrl-s": ["terminal::SendKeystroke", "ctrl-s"],
       // "ctrl-c": "terminal::Copy",
       "ctrl-insert": "terminal::Copy",
       "ctrl-v": "terminal::Paste"

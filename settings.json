@@ -82,8 +82,8 @@
   "agent": {
     "default_view": "text_thread",
     "default_model": {
-      "provider": "google",
-      "model": "gemini-2.5-pro"
+      "provider": "OpenWebUi",
+      "model": "gemma3:12b"
     }
   },
   

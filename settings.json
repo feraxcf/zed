@@ -14,10 +14,10 @@
         "api_url": "https://lsm.feraxhp.com/ollama/v1",
         "available_models": [
           {
-            "name": "gemma3:12b",
-            "max_tokens": 200000,
-            "max_output_tokens": 32000,
-            "max_completion_tokens": 200000,
+            "name": "qwen3-vl:30b",
+            "max_tokens": 2000000,
+            "max_output_tokens": 320000,
+            "max_completion_tokens": 2000000,
             "capabilities": {
               "tools": true,
               "images": false,
@@ -41,6 +41,7 @@
       }
     }
   },
+  "colorize_brackets": true,
   "message_editor": {
     "auto_replace_emoji_shortcode": true
   },
@@ -82,8 +83,8 @@
   "agent": {
     "default_view": "text_thread",
     "default_model": {
-      "provider": "OpenWebUi",
-      "model": "gemma3:12b"
+      "provider": "google",
+      "model": "gemini-2.5-flash"
     }
   },
   
@@ -172,8 +173,8 @@
       "enabled": true,
       "update_debounce_ms": 100,
       "padding": 4,
-      "min_column": 90,
-      "max_severity": "warning"
+      "min_column": 40,
+      "max_severity": "all"
     },
     "include_warnings": true
   },
@@ -224,23 +225,32 @@
   "unnecessary_code_fade": 0.8,
   "ssh_connections": [
     {
-      "host": "home.sv",
+      "host": "home.dk",
       "username": "feraxhp",
-      "port": 2222,
+      "port": 22,
       "args": [],
       "projects": [
         {
           "paths": [
             "/home/feraxhp/projects/pprojects/grp/./"
           ]
+        },
+        {
+          "paths": [
+            "/home/feraxhp/projects/pprojects/todofx/./"
+          ]
         }
       ],
       "nickname": "fedorax",
-      "upload_binary_over_ssh": true,
+      "upload_binary_over_ssh": false,
       "port_forwards": [
         {
-          "local_port": 5173,
-          "remote_port": 5173
+          "local_port": 3000,
+          "remote_port": 3000
+        },
+        {
+          "local_port": 8080,
+          "remote_port": 8069
         }
       ]
     }

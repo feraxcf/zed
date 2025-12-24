@@ -39,7 +39,7 @@
       "ctrl-f11": "debugger::StepInto",
       "shift-f11": "debugger::StepOut",
       "f11": "zed::ToggleFullScreen",
-      "ctrl-alt-z": "edit_prediction::RateCompletions",
+      // "ctrl-alt-z": "edit_prediction::RateCompletions",
       "ctrl-shift-i": "edit_prediction::ToggleMenu",
       "ctrl-alt-l": "lsp_tool::ToggleMenu"
     }
@@ -137,7 +137,7 @@
       "find": "buffer_search::Deploy",
       "ctrl-f": "buffer_search::Deploy",
       "ctrl-h": "buffer_search::DeployReplace",
-      "ctrl->": "agent::QuoteSelection",
+      "ctrl->": "agent::AddSelectionToThread",
       "ctrl-<": "assistant::InsertIntoEditor",
       "ctrl-alt-e": "editor::SelectEnclosingSymbol",
       "ctrl-shift-backspace": "editor::GoToPreviousChange",
@@ -235,12 +235,12 @@
       "ctrl-alt-p": "agent::OpenRulesLibrary",
       "ctrl-i": "agent::ToggleProfileSelector",
       "ctrl-alt-/": "agent::ToggleModelSelector",
-      "ctrl-shift-a": "agent::ToggleContextPicker",
+      // "ctrl-shift-a": "agent::ToggleContextPicker",
       "ctrl-shift-j": "agent::ToggleNavigationMenu",
       "ctrl-shift-i": "agent::ToggleOptionsMenu",
       "shift-alt-escape": "agent::ExpandMessageEditor",
-      "ctrl->": "agent::QuoteSelection",
-      "ctrl-alt-e": "agent::RemoveAllContext",
+      "ctrl->": "agent::AddSelectionToThread",
+      // "ctrl-alt-e": "agent::RemoveAllContext",
       "ctrl-shift-e": "project_panel::ToggleFocus",
       "ctrl-shift-enter": "agent::ContinueThread",
       "super-ctrl-b": "agent::ToggleBurnMode",
@@ -320,8 +320,8 @@
       "right": "agent::FocusRight",
       "left": "agent::FocusLeft",
       "down": "agent::FocusDown",
-      "backspace": "agent::RemoveFocusedContext",
-      "enter": "agent::AcceptSuggestedContext"
+      // "backspace": "agent::RemoveFocusedContext",
+      // "enter": "agent::AcceptSuggestedContext"
     }
   },
   {
@@ -449,7 +449,7 @@
       "ctrl-alt-shift-l": "search::ToggleSelection",
       "alt-enter": "search::SelectAllMatches",
       "alt-c": "search::ToggleCaseSensitive",
-      "alt-w": "search::ToggleWholeWord",
+      // "alt-w": "search::ToggleWholeWord",
       "alt-find": "project_search::ToggleFilters",
       "alt-ctrl-f": "project_search::ToggleFilters",
       "ctrl-alt-shift-r": "search::ToggleRegex",
@@ -676,7 +676,6 @@
     "bindings": {
       "tab": "editor::AcceptEditPrediction",
       "alt-l": "editor::AcceptEditPrediction",
-      "tab": "editor::AcceptEditPrediction",
       "alt-right": "editor::AcceptPartialEditPrediction"
     }
   },
@@ -744,7 +743,7 @@
     "bindings": {
       "ctrl-[": "agent::CyclePreviousInlineAssist",
       "ctrl-]": "agent::CycleNextInlineAssist",
-      "ctrl-alt-e": "agent::RemoveAllContext"
+      // "ctrl-alt-e": "agent::RemoveAllContext"
     }
   },
   {
@@ -1184,7 +1183,7 @@
       "shift-enter": "editor::NewlineBelow",
       "ctrl-shift-enter": null,
       "ctrl-enter": "editor::NewlineAbove",
-      "alt-z": "zeta::PreviewCompletion"
+      // "alt-z": "zeta::PreviewCompletion"
     }
   },
   // Search

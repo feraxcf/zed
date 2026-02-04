@@ -1,0 +1,22 @@
+{
+    "Function fn ...": {
+        "prefix": "f",
+        "description": "Creates a funtion placceholder",
+        "body": [
+            "fn ${1:func}($2) ${3:-> } {",
+            "    $0",
+            "    todo!()",
+            "}",
+        ]
+    },
+    "Result<_,_>": {
+        "prefix": "r",
+        "description": "Create a Result<_, _>",
+        "body": ["Result<$1, $2>$0"]
+    },
+    "Option<_>": {
+        "prefix": "o",
+        "description": "Create a Option<_>",
+        "body": ["Option<$1>$0"]
+    },
+}

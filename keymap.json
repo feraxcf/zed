@@ -4,8 +4,9 @@
     "context": "Workspace",
     "bindings": {
       "ctrl-shift-p": "command_palette::Toggle",
-      "alt-s": "terminal_panel::ToggleFocus",
+      "shift-c": "workspace::NewCenterTerminal",
       "ctrl-f": "buffer_search::Deploy",
+      "alt-s": "terminal_panel::ToggleFocus",
       
       // Zed
       "ctrl-,": "zed::OpenSettingsFile",

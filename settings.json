@@ -8,6 +8,23 @@
 // from the command palette or from `Zed` application menu.
 {
   // languaje models
+  "lsp": {
+    "vtsls": {
+      "settings": {
+        "typescript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        },
+        "javascript": {
+          "updateImportsOnFileMove": {
+            "enabled": "always"
+          }
+        }
+      },
+      "enable_lsp_tasks": true
+    }
+  },
   "language_models": {
     "openai_compatible": {
       "OpenWebUi": {
@@ -104,8 +121,8 @@
   "agent": {
     "default_view": "text_thread",
     "default_model": {
-      "provider": "OpenWebUi",
-      "model": "qwen3-coder:30b",
+      "provider": "google",
+      "model": "gemini-2.5-flash",
     },
   },
 
@@ -258,27 +275,42 @@
       "args": [],
       "projects": [
         {
-          "paths": ["/home/feraxhp/projects/pprojects/grp/./"],
+          "paths": [
+            "/home/feraxhp/projects/pprojects/cim/./"
+          ]
         },
         {
-          "paths": ["/home/feraxhp/projects/pprojects/guitite/./"],
+          "paths": [
+            "/home/feraxhp/projects/pprojects/grp/./"
+          ]
         },
         {
-          "paths": ["/home/feraxhp/projects/pprojects/todofx/./"],
+          "paths": [
+            "/home/feraxhp/projects/pprojects/guitite/./"
+          ]
         },
+        {
+          "paths": [
+            "/home/feraxhp/projects/pprojects/todofx/./"
+          ]
+        }
       ],
       "nickname": "fedorax",
       "upload_binary_over_ssh": false,
       "port_forwards": [
         {
           "local_port": 3000,
-          "remote_port": 3000,
+          "remote_port": 3000
+        },
+        {
+          "local_port": 35729,
+          "remote_port": 35729
         },
         {
           "local_port": 8080,
-          "remote_port": 8069,
-        },
-      ],
-    },
+          "remote_port": 8069
+        }
+      ]
+    }
   ],
 }

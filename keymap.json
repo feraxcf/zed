@@ -98,7 +98,9 @@
       "ctrl-z": "editor::Undo",
       "ctrl-y": "editor::Redo",
       "ctrl-_": "editor::ToggleFold",
+      "ctrl-shift-u": "editor::ToggleCase",
       "ctrl-space": "editor::ShowCompletions",
+      "ctrl-tab": "tab_switcher::ToggleAll",
       
       "tab": "editor::Tab",
       "shift-tab": "editor::Backtab",
@@ -179,7 +181,6 @@
   {
     "context": "Editor && mode == full",
     "bindings": {
-      "enter": "editor::Newline",
       "ctrl-enter": "editor::NewlineAbove",
       "shift-enter": "editor::NewlineBelow",
       
@@ -190,6 +191,12 @@
       "alt-enter": "editor::ToggleCodeActions",
       
       "ctrl-g": "go_to_line::Toggle",
+    },
+  },
+  {
+    "context": "Editor && !showing_code_actions && mode == full",
+    "bindings": {
+      "enter": "editor::Newline"
     },
   },
   {
@@ -212,8 +219,14 @@
   {
     "context": "Editor && showing_completions",
     "bindings": {
-      "tab": "editor::ConfirmCompletionReplace",
       "enter": "editor::ConfirmCompletion",
+      "tab": "editor::ConfirmCompletionReplace",
+    },
+  },
+  {
+    "context": "Editor && showing_code_actions",
+    "bindings": {
+      "enter": "editor::ConfirmCodeAction",
     },
   },
   {
@@ -222,7 +235,7 @@
       "up": "editor::ContextMenuPrevious",
       "down": "editor::ContextMenuNext",
       "pageup": "editor::ContextMenuFirst",
-      "pagedown": "editor::ContextMenuLast",
+      "pagedown": "editor::ContextMenuLast"
     },
   },
   //-- Languaje specific
@@ -265,6 +278,36 @@
       "ctrl-shift-b": ["workspace::SendKeystrokes", "ctrl-x /* ctrl-v "], // Temporary: Add block comment
     },
   },
+  {
+    "context": "Editor && ( extension == js || extension == ts )",
+    "bindings": {
+      "alt-f": ["workspace::SendKeystrokes", "`` left"],
+      "ctrl-shift-b": ["workspace::SendKeystrokes", "ctrl-x /* ctrl-v "], // Temporary: Add block comment
+    },
+  },
+  {
+    "context": "TabSwitcher", // Not matching because of 'low precedence'
+    "bindings": {
+      "up": "panel::NextPanelTab",
+      "alt-x": "pane::CloseActiveItem",
+    }
+  },
+  {
+    "context": "AgentConfiguration", // Not matching because of 'low precedence'
+    "bindings": {
+      "enter": "menu::Confirm",
+    }
+  },
+  //--- Prompt
+  {
+    "context": "Prompt",
+    "bindings": {
+      "enter": "menu::Confirm",
+      "escape": "menu::Cancel",
+      "up": "menu::SelectNext", 
+      "down": "menu::SelectPrevious", 
+    }
+  },
   //--- Picker
   {
     "context": "Picker",
@@ -283,7 +326,8 @@
   {
     "context": "ProjectPanel > Editor",
     "bindings": {
-      "enter": "menu::Confirm"
+      "enter": "menu::Confirm",
+      "escape": "menu::Cancel",
     },
   },
   {
@@ -310,7 +354,6 @@
       "shift-up": "menu::SelectPrevious",
       "shift-down": "menu::SelectNext",
       
-      "escape": "menu::Cancel",
       "space": "project_panel::Open",
       "enter": "project_panel::OpenPermanent",
       "ctrl-f": "project_panel::NewSearchInDirectory",

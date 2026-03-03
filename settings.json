@@ -121,8 +121,9 @@
   "agent": {
     "default_view": "text_thread",
     "default_model": {
-      "provider": "google",
-      "model": "gemini-2.5-flash",
+      "enable_thinking": false,
+      "provider": "OpenWebUi",
+      "model": "qwen3-coder:30b",
     },
   },
 

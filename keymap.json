@@ -5,8 +5,10 @@
     "bindings": {
       "ctrl-shift-p": "command_palette::Toggle",
       "shift-c": "workspace::NewCenterTerminal",
-      "ctrl-f": "buffer_search::Deploy",
       "alt-s": "terminal_panel::ToggleFocus",
+      "ctrl-f": "buffer_search::Deploy",
+      "ctrl-shift-f": "pane::DeploySearch",
+      "alt--": "project_panel::CollapseAllEntries",
       
       // Zed
       "ctrl-,": "zed::OpenSettingsFile",
@@ -306,6 +308,20 @@
       "escape": "menu::Cancel",
       "up": "menu::SelectNext", 
       "down": "menu::SelectPrevious", 
+    }
+  },
+  {
+    "context": "PasswordPrompt",
+    "bindings": {
+      "enter": "menu::Confirm",
+      "escape": "menu::Cancel",
+    }
+  },
+  {
+    "context": "ProjectSearchBar",
+    "bindings": {
+      "enter": "menu::Confirm",
+      "escape": "menu::Cancel",
     }
   },
   //--- Picker

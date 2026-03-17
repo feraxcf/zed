@@ -338,6 +338,13 @@
       "down": "menu::SelectNext",
     },
   },
+  //--- GoToLine
+  {
+    "context": "GoToLine",
+    "bindings": {
+      "enter": "menu::Confirm"
+    }
+  },
   //--- Project Panel
   {
     "context": "ProjectPanel > Editor",

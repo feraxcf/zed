@@ -224,6 +224,9 @@
     },
     "hunk_style": "unstaged_hollow",
   },
+  "git_panel": {
+    "file_icons": true
+  },
   "indent_guides": {
     "line_width": 1,
     "active_line_width": 1,

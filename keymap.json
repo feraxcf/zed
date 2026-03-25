@@ -34,6 +34,7 @@
       
       // Pane
       "ctrl-shift-t": "pane::ReopenClosedItem",
+      
       "alt-i": "pane::SplitAndMoveUp",
       "alt-k": "pane::SplitAndMoveDown",
       "alt-j": "pane::SplitAndMoveLeft",
@@ -61,6 +62,12 @@
       "alt-7": ["workspace::ActivatePane", 6],
       "alt-8": ["workspace::ActivatePane", 7],
       "alt-9": ["workspace::ActivatePane", 8],
+      
+      // General dialogs
+      "enter": "menu::Confirm",
+      "escape": "menu::Cancel",
+      "up": "menu::SelectNext", 
+      "down": "menu::SelectPrevious", 
     },
   },
   {
@@ -73,19 +80,25 @@
   {
     "context": "Pane",
     "bindings": {
-      "shift-1": ["pane::ActivateItem", 0],
-      "shift-2": ["pane::ActivateItem", 1],
-      "shift-3": ["pane::ActivateItem", 2],
-      "shift-4": ["pane::ActivateItem", 3],
-      "shift-5": ["pane::ActivateItem", 4],
-      "shift-6": ["pane::ActivateItem", 5],
-      "shift-7": ["pane::ActivateItem", 6],
-      "shift-8": ["pane::ActivateItem", 7],
-      "shift-9": ["pane::ActivateItem", 8],
+      "ctrl-1": ["pane::ActivateItem", 0],
+      "ctrl-2": ["pane::ActivateItem", 1],
+      "ctrl-3": ["pane::ActivateItem", 2],
+      "ctrl-4": ["pane::ActivateItem", 3],
+      "ctrl-5": ["pane::ActivateItem", 4],
+      "ctrl-6": ["pane::ActivateItem", 5],
+      "ctrl-7": ["pane::ActivateItem", 6],
+      "ctrl-8": ["pane::ActivateItem", 7],
+      "ctrl-9": ["pane::ActivateItem", 8],
       
-      "alt-x": ["pane::CloseActiveItem", { "close_pinned": false }],
-      "alt-c": ["pane::CloseCleanItems", { "close_pinned": false }],
+      "alt-x":       ["pane::CloseActiveItem", { "close_pinned": false }],
+      "alt-c":       ["pane::CloseCleanItems", { "close_pinned": false }],
       "alt-shift-x": ["pane::CloseOtherItems", { "close_pinned": false }],
+    },
+  },
+  {
+    "context": "Pane && EmptyPane",
+    "bindings": {
+      "alt-x": ["workspace::SendKeystrokes", "shift-f alt-x"], // Work arround to close an empty pane
     },
   },
   //--- Editor
@@ -193,6 +206,8 @@
       "alt-enter": "editor::ToggleCodeActions",
       
       "ctrl-g": "go_to_line::Toggle",
+      "°": "editor::AlignSelections",
+      "shift-l": "editor::AlignSelections",
     },
   },
   {
@@ -288,56 +303,50 @@
     },
   },
   {
-    "context": "TabSwitcher", // Not matching because of 'low precedence'
+    "context": "TabSwitcher",
     "bindings": {
       "up": "panel::NextPanelTab",
-      "alt-x": "pane::CloseActiveItem",
-    }
-  },
-  {
-    "context": "AgentConfiguration", // Not matching because of 'low precedence'
-    "bindings": {
-      "enter": "menu::Confirm",
+      "alt-x": "tab_switcher::CloseSelectedItem",
     }
   },
   //--- Prompt
-  {
-    "context": "Prompt",
-    "bindings": {
-      "enter": "menu::Confirm",
-      "escape": "menu::Cancel",
-      "up": "menu::SelectNext", 
-      "down": "menu::SelectPrevious", 
-    }
-  },
-  {
-    "context": "PasswordPrompt",
-    "bindings": {
-      "enter": "menu::Confirm",
-      "escape": "menu::Cancel",
-    }
-  },
-  {
-    "context": "ProjectSearchBar",
-    "bindings": {
-      "enter": "menu::Confirm",
-      "escape": "menu::Cancel",
-    }
-  },
+  // {
+  //   "context": "Prompt",
+  //   "bindings": {
+  //     "enter": "menu::Confirm",
+  //     "escape": "menu::Cancel",
+  //     "up": "menu::SelectNext", 
+  //     "down": "menu::SelectPrevious", 
+  //   }
+  // },
+  // {
+  //   "context": "PasswordPrompt",
+  //   "bindings": {
+  //     "enter": "menu::Confirm",
+  //     "escape": "menu::Cancel",
+  //   }
+  // },
+  // {
+  //   "context": "ProjectSearchBar",
+  //   "bindings": {
+  //     "enter": "menu::Confirm",
+  //     "escape": "menu::Cancel",
+  //   }
+  // },
   //--- Picker
-  {
-    "context": "Picker",
-    "bindings": {
-      "enter": "menu::Confirm",
-    }
-  },
-  {
-    "context": "Picker || menu",
-    "bindings": {
-      "up": "menu::SelectPrevious",
-      "down": "menu::SelectNext",
-    },
-  },
+  // {
+  //   "context": "Picker",
+  //   "bindings": {
+  //     "enter": "menu::Confirm",
+  //   }
+  // },
+  // {
+  //   "context": "Picker || menu",
+  //   "bindings": {
+  //     "up": "menu::SelectPrevious",
+  //     "down": "menu::SelectNext",
+  //   },
+  // },
   //--- GoToLine
   {
     "context": "GoToLine",

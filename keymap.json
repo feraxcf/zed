@@ -114,6 +114,7 @@
       "ctrl-y": "editor::Redo",
       "ctrl-_": "editor::ToggleFold",
       "ctrl-shift-u": "editor::ToggleCase",
+      "ctrl-shift-t": "editor::ConvertToTitleCase",
       "ctrl-space": "editor::ShowCompletions",
       "ctrl-tab": "tab_switcher::ToggleAll",
       

@@ -66,8 +66,8 @@
       // General dialogs
       "enter": "menu::Confirm",
       "escape": "menu::Cancel",
-      "up": "menu::SelectNext", 
-      "down": "menu::SelectPrevious", 
+      "down": "menu::SelectNext", 
+      "Up": "menu::SelectPrevious", 
     },
   },
   {

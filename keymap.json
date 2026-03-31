@@ -209,6 +209,10 @@
       "ctrl-g": "go_to_line::Toggle",
       "°": "editor::AlignSelections",
       "shift-l": "editor::AlignSelections",
+      
+      // Git
+      "shift-g shift-r": "git::RestoreAndNext",
+      "shift-g shift-s": "git::StageAndNext",
     },
   },
   {

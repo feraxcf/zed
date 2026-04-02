@@ -312,6 +312,8 @@
     "context": "Pane && buffer_search_deployed",
     "bindings": {
       "shift-s": "search::FocusSearch",
+      "shift-n": "search::SelectNextMatch",
+      "shift-p": "search::SelectPreviousMatch",
     },
   },
   {

@@ -1,3 +1,7 @@
 {
-  
+  "languages": {
+    "JSON": {
+      "tab_size": 2
+    }
+  }
 }

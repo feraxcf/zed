@@ -54,5 +54,7 @@
     "prefix": "hel",
     "description": "HTMLElement type",
     "body": ["HTML$1Element$0"]
-  }
+  },
+  "html": { "body":["/* html */`$0`;"] },
+  "css" : { "body":["/* css */`$0`;"] },
 }

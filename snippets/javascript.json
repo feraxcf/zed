@@ -43,5 +43,7 @@
   "document": {
     "prefix": "doc",
     "body": ["document"]
-  }
+  },
+  "html": { "body":["/* html */`$0`;"] },
+  "css" : { "body":["/* css */`$0`;"] },
 }

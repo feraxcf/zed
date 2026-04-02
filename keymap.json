@@ -409,6 +409,7 @@
       "ctrl-w": ["terminal::SendKeystroke", "ctrl-w"],
       "ctrl-shift-c": ["terminal::SendKeystroke", "ctrl-c"],
       "ctrl-shift-v": ["terminal::SendKeystroke", "ctrl-v"],
+      "ctrl-tab": "tab_switcher::ToggleAll",
     },
   },
   {

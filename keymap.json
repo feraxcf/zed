@@ -307,56 +307,50 @@
       "ctrl-shift-b": ["workspace::SendKeystrokes", "ctrl-x /* ctrl-v "], // Temporary: Add block comment
     },
   },
+  //--- SearchBar
+  {
+    "context": "Pane && buffer_search_deployed",
+    "bindings": {
+      "shift-s": "search::FocusSearch",
+    },
+  },
+  {
+    "context": "BufferSearchBar > Editor",
+    "bindings": {
+      "shift-r": "search::ToggleReplace",
+      
+      // Modes
+      "shift-a": "search::ToggleCaseSensitive",
+      "shift-w": "search::ToggleWholeWord",
+      "shift-e": "search::ToggleRegex",
+      
+      // Actions
+      "alt-x": "editor::Cancel",
+      "alt-enter": "search::SelectAllMatches",
+      "alt-right": "editor::ToggleFocus",
+      "shift-up": "search::PreviousHistoryQuery",
+      "shift-down": "search::NextHistoryQuery",
+      "shift-n": "search::SelectNextMatch",
+      "shift-p": "search::SelectPreviousMatch",
+      
+      // Edition
+      "ctrl-enter": "editor::NewlineAbove",
+    },
+  },
+  {
+    "context": "(BufferSearchBar && in_replace) > Editor",
+    "bindings": {
+      "ctrl-n": "search::ReplaceNext",
+      "alt-r": "search::ReplaceAll",
+    },
+  },
+  //--- TabSwitcher
   {
     "context": "TabSwitcher",
     "bindings": {
       "up": "panel::NextPanelTab",
       "alt-x": "tab_switcher::CloseSelectedItem",
-    }
-  },
-  //--- Prompt
-  // {
-  //   "context": "Prompt",
-  //   "bindings": {
-  //     "enter": "menu::Confirm",
-  //     "escape": "menu::Cancel",
-  //     "up": "menu::SelectNext", 
-  //     "down": "menu::SelectPrevious", 
-  //   }
-  // },
-  // {
-  //   "context": "PasswordPrompt",
-  //   "bindings": {
-  //     "enter": "menu::Confirm",
-  //     "escape": "menu::Cancel",
-  //   }
-  // },
-  // {
-  //   "context": "ProjectSearchBar",
-  //   "bindings": {
-  //     "enter": "menu::Confirm",
-  //     "escape": "menu::Cancel",
-  //   }
-  // },
-  //--- Picker
-  // {
-  //   "context": "Picker",
-  //   "bindings": {
-  //     "enter": "menu::Confirm",
-  //   }
-  // },
-  // {
-  //   "context": "Picker || menu",
-  //   "bindings": {
-  //     "up": "menu::SelectPrevious",
-  //     "down": "menu::SelectNext",
-  //   },
-  // },
-  //--- GoToLine
-  {
-    "context": "GoToLine",
-    "bindings": {
-      "enter": "menu::Confirm"
+      "tab": "menu::Confirm",
     }
   },
   //--- Project Panel
@@ -395,14 +389,6 @@
       "enter": "project_panel::OpenPermanent",
       "ctrl-f": "project_panel::NewSearchInDirectory",
     },
-  },
-  //--- Welcome
-  {
-    "context": "Welcome",
-    "bindings": {
-      "down": "menu::SelectNext",
-      "up": "menu::SelectPrevious"
-    }
   },
   //--- AgentPanel
   {

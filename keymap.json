@@ -400,6 +400,16 @@
       "alt-enter": "assistant::Assist"
     }
   },
+  //--- Welcome
+  {
+    "context": "Welcome",
+    "bindings": {
+      "f": "workspace::NewFile",
+      "o": "workspace::AddFolderToProject",
+      "c": "git::Clone",
+      "p": "command_palette::Toggle",
+    }
+  },
   //--- Terminal
   {
     "context": "Terminal",

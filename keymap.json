@@ -68,6 +68,9 @@
       "escape": "menu::Cancel",
       "down": "menu::SelectNext", 
       "Up": "menu::SelectPrevious", 
+      
+      // Git
+      "shift-b": "git::Switch",
     },
   },
   {

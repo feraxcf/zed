@@ -106,7 +106,7 @@
 
   // Agent configuration
   "edit_predictions": {
-    "mode": "subtle",
+    "mode": "eager",
     "disabled_globs": [],
     "copilot": {
       "enable_next_edit_suggestions": true
@@ -126,6 +126,11 @@
       {
         "provider": "OpenWebUi",
         "model": "codegemma:7b",
+        "enable_thinking": false
+      },
+      {
+        "provider": "OpenWebUi",
+        "model": "gemma4:e4b",
         "enable_thinking": false
       }
     ],

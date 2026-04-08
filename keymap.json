@@ -30,7 +30,7 @@
       
       // Agent
       "alt-d": "agent::ToggleFocus",
-      "alt-t": "agent::NewTextThread",
+      // "alt-t": "agent::NewTextThread", // they _fucking_ remove this feature
       
       // Pane
       "ctrl-shift-t": "pane::ReopenClosedItem",
@@ -400,7 +400,7 @@
     "context": "AgentPanel && text_thread > Editor",
     "bindings": {
       "ctrl-,": "agent::OpenSettings",
-      "alt-enter": "assistant::Assist"
+      // "alt-enter": "assistant::Assist" // they _fucking_ remove this feature 
     }
   },
   //--- Welcome

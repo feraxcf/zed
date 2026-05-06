@@ -1,7 +1,7 @@
 {
   "Log into the console": {
     "prefix": "lg",
-    "body": ["console.info(\"${1:var}:\", ${1:var});$0"],
+    "body": ["console.info(\"${1:var}:\"${2:, ${1:var}});$0"],
     "description": "Logs to console"
   },
   "Make a class": {
@@ -57,4 +57,9 @@
   },
   "html": { "body":["/* html */`$0`;"] },
   "css" : { "body":["/* css */`$0`;"] },
+  "return": {
+    "prefix": "rt",
+    "body": ["return $0"],
+    "description": "return"
+  },
 }

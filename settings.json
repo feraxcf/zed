@@ -8,6 +8,17 @@
 // from the command palette or from `Zed` application menu.
 {
   // languaje models
+  "cli_default_open_behavior": "existing_window",
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "diff_view_style": "unified",
   "lsp": {
     "vtsls": {
       "settings": {
@@ -80,7 +91,7 @@
     "show_onboarding_banner": true,
     "show_user_picture": true,
     "show_menus": false,
-    "show_branch_icon": true,
+    "show_branch_status_icon": true,
   },
   "ui_font_family": ".ZedSans",
   "theme": {
@@ -122,6 +133,8 @@
     "provider": "open_ai_compatible_api",
   },
   "agent": {
+    "sidebar_side": "right",
+    "dock": "right",
     "favorite_models": [
       {
         "provider": "OpenWebUi",
@@ -134,7 +147,6 @@
         "enable_thinking": false
       }
     ],
-    "default_view": "text_thread",
     "default_model": {
       "enable_thinking": false,
       "provider": "OpenWebUi",
@@ -249,6 +261,7 @@
     "hunk_style": "unstaged_hollow",
   },
   "git_panel": {
+    "dock": "left",
     "file_icons": true
   },
   "indent_guides": {
@@ -332,6 +345,17 @@
         {
           "local_port": 8080,
           "remote_port": 8069
+        }
+      ]
+    },
+    {
+      "host": "ean.dev",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/user/projects/odata-rest"
+          ]
         }
       ]
     }

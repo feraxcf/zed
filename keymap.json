@@ -263,6 +263,12 @@
       "pagedown": "editor::ContextMenuLast"
     },
   },
+  {
+    "context": "Editor > Markdown",
+    "bindings": {
+      "ctrl-c": "markdown::Copy",
+    },
+  },
   //-- Languaje specific
   {
     "context": "Editor && !extension",
@@ -320,7 +326,7 @@
     },
   },
   {
-    "context": "BufferSearchBar > Editor",
+    "context": "(BufferSearchBar || ProjectSearchBar) > Editor",
     "bindings": {
       "shift-r": "search::ToggleReplace",
       
@@ -409,8 +415,10 @@
     "bindings": {
       "f": "workspace::NewFile",
       "o": "workspace::AddFolderToProject",
-      "c": "git::Clone",
+      "c": "workspace::NewCenterTerminal",
+      "g": "git::Clone",
       "p": "command_palette::Toggle",
+      "z": "projects::OpenRecent",
     }
   },
   //--- Terminal

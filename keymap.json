@@ -115,7 +115,7 @@
       "ctrl-v": "editor::Paste",
       "ctrl-z": "editor::Undo",
       "ctrl-y": "editor::Redo",
-      "ctrl-_": "editor::ToggleFold",
+      "ctrl-:": "editor::ToggleFold",
       "ctrl-shift-u": "editor::ToggleCase",
       "ctrl-shift-t": "editor::ConvertToTitleCase",
       "ctrl-space": "editor::ShowCompletions",

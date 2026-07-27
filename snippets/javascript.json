@@ -1,11 +1,18 @@
 {
-  "Log into the console": {
-    "prefix": "lg",
-    "body": ["console.info(\"${1:var}:\"${2:, ${1:var}});$0"],
-    "description": "Logs to console"
+  "console.info": {
+    "prefix": "info",
+    "body": ["console.info(`${1:var}: '\\${${1:var}}'`);$0"],
+  },
+  "console.debug": {
+    "prefix": "debug",
+    "body": ["console.debug(`${1:var}: '\\${${1:var}}'`);$0"],
+  },
+  "console.log": {
+    "prefix": "log",
+    "body": ["console.log(`${1:var}: '\\${${1:var}}'`);$0"],
   },
   "Make a class": {
-    "prefix": "cl",
+    "prefix": "class",
     "body": [
       "export class ${1:ClassName} {",
       "  constructor(${2:args}) {",
@@ -13,32 +20,20 @@
       "  }",
       "}"
     ],
-    "description": "Creates a class with a constructor and a method"
   },
-  "Makes arrow": {
+  "Create an arrow function": {
     "prefix": "ar",
     "body": [
       "(${2:args}) => { $0 }"
     ],
-    "description": "Creates an arrow function"
   },
-  "Makes function": {
+  "Create a function": {
     "prefix": "fn",
     "body": [
       "function ${1:funcName}(${2:args}) {",
       "  $0",
       "}"
     ],
-    "description": "Creates a function"
-  },
-  "Makes async function": {
-    "prefix": "as",
-    "body": [
-      "async function ${1:funcName}(${2:args}) {",
-      "  $0",
-      "}"
-    ],
-    "description": "Creates an async function"
   },
   "document": {
     "prefix": "doc",

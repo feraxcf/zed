@@ -3,6 +3,10 @@
     "prefix": "info",
     "body": ["console.info(`${1:var}: '\\${${1:var}}'`);$0"],
   },
+  "console.info.obj": {
+    "prefix": "o.info",
+    "body": ["console.info(`${1:var}:`, ${1:var});$0"],
+  },
   "console.debug": {
     "prefix": "debug",
     "body": ["console.debug(`${1:var}: '\\${${1:var}}'`);$0"],

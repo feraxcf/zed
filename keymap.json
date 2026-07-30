@@ -79,6 +79,16 @@
       "f5": "debugger::Continue",
     },
   },
+  //--- Prompt
+  {
+    "context": "Prompt",
+    "bindings": {
+      "enter": "menu::Confirm",
+      "escape": "menu::Cancel",
+      "down": "menu::SelectNext", 
+      "Up": "menu::SelectPrevious", 
+    },
+  },
   //--- Pane
   {
     "context": "Pane",

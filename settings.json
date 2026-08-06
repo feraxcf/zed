@@ -13,6 +13,7 @@
       "type": "registry"
     }
   },
+  "disable_ai": true,
   "cli_default_open_behavior": "existing_window",
   "project_panel": {
     "dock": "left"

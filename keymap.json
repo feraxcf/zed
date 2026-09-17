@@ -369,7 +369,6 @@
   {
     "context": "TabSwitcher",
     "bindings": {
-      "up": "panel::NextPanelTab",
       "alt-x": "tab_switcher::CloseSelectedItem",
       "tab": "menu::Confirm",
     }

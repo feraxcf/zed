@@ -9,6 +9,9 @@
 {
   // languaje models
   "agent_servers": {
+    "gemini": {
+      "type": "registry"
+    },
     "opencode": {
       "type": "registry"
     }
@@ -40,6 +43,12 @@
         }
       },
       "enable_lsp_tasks": true
+    },
+    "rust-analyzer": {
+      "initialization_options": {
+        // "diagnostics": { "enable": false },
+        // "checkOnSave": false
+      }
     }
   },
   "language_models": {
@@ -139,6 +148,7 @@
     "provider": "open_ai_compatible_api",
   },
   "agent": {
+    "enable_feedback": false,
     "sidebar_side": "right",
     "dock": "right",
     "favorite_models": [
@@ -201,6 +211,9 @@
     "HTML": {
       "language_servers": ["emmet-language-server"],
     },
+    "Rust": {
+      "language_servers": [ "bacon", "rust-analyzer" ]
+    }
   },
 
   // General settings
@@ -214,11 +227,16 @@
   "buffer_font_family": "JetBrains Mono NL",
   "buffer_line_height": "comfortable",
   "buffer_font_fallbacks": [
-    ".ZedMono",
     "JetBrains Mono",
     "JetBrainsMono Nerd Font",
+    ".ZedMono",
     "Cascadia Mono",
   ],
+  "buffer_font_features":{
+    "calt": false,
+    "cv01": 7,
+    
+  },
   "confirm_quit": false,
   "load_direnv": "shell_hook",
   "hide_mouse": "on_typing",
@@ -346,6 +364,10 @@
           "remote_port": 3000
         },
         {
+          "local_port": 7770,
+          "remote_port": 7770
+        },
+        {
           "local_port": 35729,
           "remote_port": 35729
         },
@@ -365,6 +387,6 @@
           ]
         }
       ]
-    }
+    },
   ],
 }

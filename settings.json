@@ -9,14 +9,14 @@
 {
   // languaje models
   "agent_servers": {
-    "gemini": {
-      "type": "registry"
-    },
-    "opencode": {
+    "antigravity-acp": {
+      "default_config_options": {
+        "model": "gemini-3.8-flash-high"
+      },
       "type": "registry"
     }
   },
-  "disable_ai": true,
+  "disable_ai": false,
   "cli_default_open_behavior": "existing_window",
   "project_panel": {
     "dock": "left"
@@ -50,51 +50,6 @@
         // "checkOnSave": false
       }
     }
-  },
-  "language_models": {
-    "openai_compatible": {
-      "OpenWebUi": {
-        "api_url": "https://lsm.feraxhp.com/ollama/v1",
-        "available_models": [
-          {
-            "name": "gemma4:26b",
-            "max_tokens": 200000,
-            "max_output_tokens": 32000,
-            "max_completion_tokens": 200000,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": false,
-            },
-          },
-          {
-            "name": "gemma4:e4b",
-            "max_tokens": 200000,
-            "max_output_tokens": 32000,
-            "max_completion_tokens": 200000,
-            "capabilities": {
-              "tools": true,
-              "images": true,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": false,
-            },
-          },
-          {
-            "name": "codegemma:7b",
-            "max_tokens": 200000,
-            "max_output_tokens": 32000,
-            "max_completion_tokens": 200000,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": false,
-            },
-          },
-        ],
-      },
-    },
   },
   "colorize_brackets": true,
   "message_editor": {
@@ -149,8 +104,11 @@
     "provider": "open_ai_compatible_api",
   },
   "agent": {
+    "threads_sidebar": {
+      "auto_open": false,
+      "position": "right"
+    },
     "enable_feedback": false,
-    "sidebar_side": "right",
     "dock": "right",
     "favorite_models": [
       {

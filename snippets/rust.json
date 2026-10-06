@@ -19,4 +19,15 @@
         "description": "Create a Option<_>",
         "body": ["Option<$1>$0"]
     },
+    "#[derive(_)]": {
+        "prefix": "derive",
+        "body": [
+          "#[derive($1)]",
+          "$0"
+        ]
+    },
+    "Clone - Debug": {
+        "prefix": "cd",
+        "body": ["Clone, Debug"]
+    },
 }

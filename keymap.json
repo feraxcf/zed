@@ -458,4 +458,20 @@
       "shift-v": "terminal::ToggleViMode",
     },
   },
+
+  // Agents
+  {
+    "context": "MessageEditor > Editor",
+    "bindings": {
+      "enter": "editor::Newline",
+      "alt-enter": "agent::Chat",
+    },
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "shift-a": "agent::AllowOnce",
+      "shift-x": "agent::RejectOnce",
+    },
+  },
 ]

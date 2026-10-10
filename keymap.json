@@ -223,6 +223,8 @@
       "°": "editor::AlignSelections",
       "shift-l": "editor::AlignSelections",
       
+      "ctrl->": "editor::GoToDefinition",
+      
       // Git
       "shift-g shift-r": "git::RestoreAndNext",
       "shift-g shift-s": "git::StageAndNext",

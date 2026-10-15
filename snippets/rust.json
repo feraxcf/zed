@@ -20,10 +20,9 @@
         "body": ["Option<$1>$0"]
     },
     "#[derive(_)]": {
-        "prefix": "derive",
+        "prefix": "d",
         "body": [
-          "#[derive($1)]",
-          "$0"
+          "#[derive($1)]$0",
         ]
     },
     "Clone - Debug": {

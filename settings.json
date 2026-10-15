@@ -124,8 +124,9 @@
   "agent_servers": {
     "antigravity-acp": {
       "default_config_options": {
+        "thinking_level": "high",
         "mode": "yolo",
-        "model": "gemini-3.8-flash-high"
+        "model": "gemini-3.8-flash"
       },
       "type": "registry"
     }
@@ -225,7 +226,7 @@
     "selections_menu": true,
   },
   "format_on_save": "off",
-  "auto_indent": "preserve_indent",
+  "auto_indent": "syntax_aware",
   "reveal_if_open": true,
   "diagnostics": {
     "inline": {

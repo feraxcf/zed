@@ -226,8 +226,8 @@
       "ctrl->": "editor::GoToDefinition",
       
       // Git
-      "shift-g shift-r": "git::RestoreAndNext",
-      "shift-g shift-s": "git::StageAndNext",
+      "shift-g shift-r": "git::Restore",
+      "shift-g shift-s": "git::StageSection",
     },
   },
   {

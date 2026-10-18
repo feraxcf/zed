@@ -29,4 +29,22 @@
         "prefix": "cd",
         "body": ["Clone, Debug"]
     },
+    "New": {
+        "prefix": "new",
+        "body": [
+          "pub fn new() -> Self {",
+          "    Self { $0 }",
+          "}",
+        ]
+    },
+    "test": {
+        "prefix": "ts",
+        "body": [
+          "#[test]",
+          "fn ${1:func}() -> Result<(), Report> {",
+          "    $0",
+          "    Ok(())",
+          "}",
+        ]
+    },
 }

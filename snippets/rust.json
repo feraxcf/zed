@@ -19,6 +19,11 @@
         "description": "Create a Option<_>",
         "body": ["Option<$1>$0"]
     },
+    "Ok(_)": {
+        "prefix": "k",
+        "description": "Create a Ok(())",
+        "body": ["Ok(${1:()})$0"]
+    },
     "#[derive(_)]": {
         "prefix": "d",
         "body": [

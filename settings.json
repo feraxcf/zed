@@ -180,7 +180,7 @@
   // General settings
   "autosave": "on_focus_change",
   "restore_on_startup": "launchpad",
-  "auto_update": true, // This will change when Zed is released 4 windows
+  "auto_update": false, // This will change when Zed has NotoColorEmoji support
   "use_system_prompts": false,
   "base_keymap": "None",
   "ui_font_size": 15,
@@ -188,6 +188,7 @@
   "buffer_font_family": "JetBrains Mono NL",
   "buffer_line_height": "comfortable",
   "buffer_font_fallbacks": [
+    "Noto Color Emoji",
     "JetBrains Mono",
     "JetBrainsMono Nerd Font",
     ".ZedMono",
